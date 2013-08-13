@@ -1,0 +1,238 @@
+\documentclass[a4paper,landscape,english]{article}
+
+\newcommand{\bs}{$\backslash$}
+\newcommand{\remark}[1]{{\scriptsize\sf{#1}}}
+
+\usepackage{multicol}
+
+\setlength{\textheight}{190mm}	% 190 = 210mm - (10mm * 2)
+\setlength{\textwidth}{277mm}	% 277= 297mm - (10mm * 2)
+\setlength{\hoffset}{-15.4mm}	% 10mm - 1.0in = 15.4mm
+\setlength{\voffset}{-15.4mm}
+\setlength{\footskip}{10mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headheight}{0 pt}
+\setlength{\headsep}{0 in}
+
+\setlength{\parindent}{0 in}
+
+\ifx \pdfpagewidth \undefined
+\else
+ \pdfpagewidth=297mm   % page width of PDF output
+ \pdfpageheight=210mm  % page height of PDF output
+\fi
+
+\newcommand{\ctrl}{C-}
+
+\begin{document}
+\thispagestyle{empty}
+\fontsize{10}{11}\selectfont
+
+\newcommand{\key}[2]{#1 \dotfill {\footnotesize\tt #2}\par}
+\newcommand{\keycont}[1]{\hfill {\footnotesize\tt #1}\par}
+\newcommand{\head}[1]{\underline{\large\textit{#1}}\\}
+
+\begin{multicols}{3}
+{\Large\bf ST3 Quick Reference}
+{\par\normalsize Version 0.1 2013/09/22}
+
+\vbox{
+\head{General}
+\key{Command Palette}{Ctrl + Shift + P}
+\key{Sidebar}{Meta + Ctrl + B}
+\key{Fullscreen}{F11}
+\key{Discretion Free}{Shift + F11}
+\key{Switch project}{Ctrl + Alt + P}
+\key{Exit}{Ctrl + Q}
+\key{Build}{Ctrl + B}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Windows}
+\key{New window}{Ctrl + Shift + N}
+\key{Close window}{Ctrl + Shift + W}
+\key{Split view into two columns}{Alt + Shift + 2}
+\key{Revert view to single column}{Alt + Shift + 1}
+\key{Set view to grid (4 groups)}{Alt + Shift + 5}
+\key{Jump to group 1-9}{Ctrl + 1-9}
+\key{Move file to specified group 1-9}{Ctrl + Shift + 1-9}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Tabs}
+\key{Previous view}{Ctrl + Tab or Ctrl + PageUp}
+\key{Next view}{Ctrl + Shift + Tab or Ctrl + PageDown}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Files}
+\key{Prompt open file}{Ctrl + O}
+\key{Reopen last file}{trl + Shift + T}
+\key{Quick-open files by name}{Ctrl + P}
+\key{Switch file}{Alt + O}
+\key{New file}{Ctrl + N}
+\key{Save}{Ctrl + S}
+\key{Close}{Ctrl + W}
+\key{Close file}{Ctrl + F4}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Layout}
+\key{Set layout}{Alt +Shift + 1-4}
+\key{Set 2 or 3 rows}{Alt +Shift + 8/9}
+\key{Set 2x2 frid}{Alt +Shift + 5}
+\key{Focus sidebar}{Ctrl + 0}
+\key{Focus group 1-9}{Ctrl + 1-9}
+\key{Move to group 1-9}{Ctrl + Shift + 1-9}
+\key{New panel}{Meta + Ctrl+ UP}
+\key{Close panel}{Meta + Ctrl + DOWN}
+\key{Focus neighboring group}{Meta + Ctrl + Left/Right}
+\key{Move to neighboring group}{Meta + Ctrl + Shift + Left/Right}
+\key{Select by index 0-9}{Alt + 0-9}
+\key{Increase font size}{Ctrl + +}
+\key{Decrease font size}{Ctrl + -}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Navigation}
+\key{Goto symbol}{Ctrl + R}
+\key{Goto word in current file}{Ctrl + ;}
+\key{Goto line in current file}{Ctrl + G}
+\key{Goto end of line}{Alt + Q}
+\key{Jump forward}{Alt + Shift + -}
+\key{Jump backward}{Alt + -}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Selection}
+\key{Select all}{Ctrl + A}
+\key{Select page Up/Down}{Shift + PageUp/PageDown}
+\key{Select start line}{Shift + Home}
+\key{Select end line}{Shift + End}
+\key{Select subwords}{Alt + Shift Arrow}
+\key{Expand selection to brackets}{Ctrl + Shift + M}
+\key{Expand selection to indentation}{Ctrl + Shift + J}
+\key{Expand selection to scope}{Ctrl + Shift + Backspace}
+\key{Column selection}{RMouse + Shift}
+\key{Column selection Up/Down}{Alt + Shift + Up/Down}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Multiple Selection}
+\key{Multiple selection}{Ctrl + D}
+\key{Add instance}{M}
+\key{Delete current instance}{Meta + Ctrl + D}
+\key{Deselect current instance}{Ctrl + U}
+\key{Transforming Multiple Selections into lines}{Ctrl + L}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Search / Replace}
+\key{Open search panel}{Ctrl + F}
+\key{Open search Panel for Files}{Ctrl + Shift + F}
+\key{Toggle regular Expressions}{Alt + R}
+\key{Toggle case Sensitivity}{Alt + C}
+\key{Toggle exact Match}{Alt + W}
+\key{Find next}{Enter}
+\key{Find previous}{Shift + Enter}
+\key{Find all}{Alt + Enter}
+\key{Incremental Search}{Ctrl + I}
+\key{Replace all}{Ctrl + Alt + Enter}
+\key{Replace next}{Ctrl + Shift + H}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Search / Replace (buffer)}
+\key{Find next}{F3}
+\key{Find previous}{Shift + F3}
+\key{Find next under}{Ctrl + F3}
+\key{Find prev under}{Ctrl + Shift + F3}
+\key{Find all Under}{Alt + F3}
+\key{Next result}{F4}
+\key{Previous result}{Shift + F4}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Editing}
+\key{Cut}{Ctrl + X}
+\key{Copy}{Ctrl + C}
+\key{Paste}{Ctrl + V}
+\key{Paste and indent}{Ctrl + Shift + X}
+\key{Past from history}{Meta + Ctrl + V}
+\key{Undo}{Ctrl + Y}
+\key{Redo}{Ctrl + Z}
+\key{Redo or Repeat}{Ctrl + Shift + Z}
+
+\key{Insert line after}{Ctrl + Shift}
+\key{Insert line before}{Ctrl + Shift + Enter}
+\key{Move line/selection Up/Down}{Ctrl + Shift + Up/Down}
+
+\key{Select line}{Ctrl + L}
+\key{Select word}{Ctrl + D}
+\key{Jump to closing parentheses}{Ctrl + M}
+\key{Select contents of the current parentheses}{Ctrl + Shift + M}
+\key{Delete word}{Ctrl + Backspace}
+
+\key{Delete from cursor to end of line}{Ctrl + KK}
+\key{Delete from cursor to start of line}{Ctrl + K + Backspace}
+\key{Indent current line(s)}{Ctrl + ]}
+\key{Un-indent current line(s)}{Ctrl + [}
+\key{Fold}{Ctrl + Shift + [}
+
+\key{Unfold}{Ctrl + Shift + ]}
+\key{Fold level 1-9}{Meta + Ctrl + 1-9}
+\key{Unfold All}{Meta + Ctrl + 0}
+\key{Fold Tag attributes}{Meta + Ctrl + T}
+
+\key{Duplicate line(s)}{Ctrl + Shift + D}
+\key{Join line below to the end of the current line}{Ctrl + J}
+\key{Split Selection into Lines}{Ctrl + Shift + L}
+\key{Merge Line with previous Line}{Ctrl + Shift + Backspace}
+\key{Comment/un-comment current line}{Ctrl + /}
+
+\key{Block comment current selection}{Ctrl + Shift + /}
+\key{Transpose (switch)}{Ctrl + T}
+\key{Sort Lines}{F9}
+\key{Upper Case}{Meta + Ctrl + U}
+\key{Lower Case}{Meta + Ctrl + L}
+}
+
+\vskip 5pt
+
+\vbox{
+\head{Bookmark}
+\key{Toggle bookmark}{Ctrl + F2}
+\key{Next bookmark}{F2}
+\key{Previous bookmark}{Shift + F2}
+\key{Clear bookmarks}{Ctrl + Shift + F2}
+\key{Clear bookmarks}{Meta + Ctrl + G}
+\key{Select All Bookmarks}{Alt + F2}
+}
+
+\end{multicols}
+
+\vspace{\fill}
+\hfill\scriptsize Copyright \copyright\ 2013 Sebastien Douche. Permission is granted to use this document under the terms of the MIT Licence.\par
+\end{document}
